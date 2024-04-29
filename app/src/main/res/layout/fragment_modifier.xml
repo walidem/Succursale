@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/modificationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#DCFFC107"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/modification_de_succursale"
+            android:textColor="#696969"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageModifier"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/modificationToolbar"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/modifier_succursale"
+        android:contentDescription="@string/imagedemodification"/>
+
+    <EditText
+        android:id="@+id/nomSuccursaleModif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageModifier"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/nom_succursale"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/budgetSuccursaleModif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomSuccursaleModif"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/budget_succursale"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/modifierSuccursaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/budgetSuccursaleModif"
+        android:layout_marginTop="16dp"
+        android:background="#CEFF9800"
+        android:padding="15dp"
+        android:text="@string/modifier_succursale"
+        android:textColor="#696969"
+        android:textSize="18sp" />
+
+</RelativeLayout>

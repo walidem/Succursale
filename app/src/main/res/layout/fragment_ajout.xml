@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ajoutToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#DCFFC107"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/ajout_de_succursale"
+            android:textColor="#696969"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageAjout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/ajoutToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/imagedajout"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ajouter_succursale" />
+
+    <EditText
+        android:id="@+id/nomSuccursaleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageAjout"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/nom_succursale"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/budgetSuccursaleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomSuccursaleEditText"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/budget_succursale"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/ajouterSuccursaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/budgetSuccursaleEditText"
+        android:layout_marginTop="16dp"
+        android:background="#CEFF9800"
+        android:padding="15dp"
+        android:text="@string/ajouter_succursale"
+        android:textColor="#696969"
+        android:textSize="18sp" />
+
+</RelativeLayout>

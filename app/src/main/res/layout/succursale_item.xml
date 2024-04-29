@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/villeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ville_placeholder"
+        android:textSize="20sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/budgetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/budget_placeholder"
+        android:textSize="20sp"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/modifierButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/modifier"
+            android:background="#CEFF9800"
+            android:layout_margin="5dp"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/supprimerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/supprimer"
+            android:background="#CEFF9800"
+            android:layout_margin="5dp"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/favorisButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/favoris"
+            android:background="#CEFF9800"
+            android:layout_margin="5dp"
+            android:textColor="#000" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

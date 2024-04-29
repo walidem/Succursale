@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="cgodin.qc.ca.LoginFragment"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_inscriptionFragment"
+            app:destination="@id/inscriptionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gestionFragment"
+        android:name="cgodin.qc.ca.GestionFragment"
+        android:label="Gestion Fragment"
+        tools:layout="@layout/fragment_gestion">
+        <action
+            android:id="@+id/action_fragmentGestion_to_fragmentModifier"
+            app:destination="@id/modifierFragment" />
+        <action
+            android:id="@+id/action_gestionFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_gestionFragment_to_favorisFragment"
+            app:destination="@id/favorisFragment" />
+        <action
+            android:id="@+id/action_gestionFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ajoutFragment"
+        android:name="cgodin.qc.ca.AjoutFragment"
+        android:label="Ajout Fragment"
+        tools:layout="@layout/fragment_ajout">
+        <action
+            android:id="@+id/action_ajoutFragment_to_gestionFragment"
+            app:destination="@id/gestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/modifierFragment"
+        android:name="cgodin.qc.ca.ModifierFragment"
+        android:label="fragment_modifier"
+        tools:layout="@layout/fragment_modifier">
+        <argument
+            android:name="nomSuccursale"
+            app:argType="string" />
+        <argument
+            android:name="budgetSuccursale"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favorisFragment"
+        android:name="cgodin.qc.ca.FavorisFragment"
+        android:label="Favoris Fragment"
+        tools:layout="@layout/fragment_favoris">
+        <action
+            android:id="@+id/action_favorisFragment_to_gestionFragment"
+            app:destination="@id/gestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="cgodin.qc.ca.BudgetFragment"
+        android:label="Budget Fragment"
+        tools:layout="@layout/fragment_budget">
+        <action
+            android:id="@+id/action_budgetFragment_to_gestionFragment"
+            app:destination="@id/gestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inscriptionFragment"
+        android:name="cgodin.qc.ca.InscriptionFragment"
+        android:label="@string/inscription"
+        tools:layout="@layout/fragment_inscription">
+        <action
+            android:id="@+id/action_inscriptionFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_modifierFragment_to_gestionFragment"
+        app:destination="@id/gestionFragment" />
+
+    <action
+        android:id="@+id/action_fragmentGestion_to_fragmentModifier"
+        app:destination="@id/modifierFragment" />
+
+    <action
+        android:id="@+id/action_loginFragment_to_gestionFragment"
+        app:destination="@id/gestionFragment" />
+
+    <action
+        android:id="@+id/action_gestionFragment_to_ajoutFragment"
+        app:destination="@id/ajoutFragment" />
+</navigation>

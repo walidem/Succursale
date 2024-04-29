@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GestionFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/gestionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#DCFFC107"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/gestion_des_succursales"
+            android:textColor="#696969"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Bouton de déconnexion -->
+        <ImageView
+            android:id="@+id/deconnexionButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:contentDescription="Déconnexion"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_deconnexion" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/gestionToolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar">
+
+    <!-- RecyclerView for the list of branches -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- TextView pour le message "Liste Vide" -->
+    <TextView
+        android:id="@+id/textViewListeVide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aucune_succursale_pr_sente"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/gestionToolbar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone" />
+
+    <!-- Barre d'outils des boutons -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#DCFFC107"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Bouton "Ajouter une ville" -->
+        <ImageButton
+            android:id="@+id/ajouterVilleButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_branch" />
+
+        <!-- Bouton "Afficher les favoris" -->
+        <ImageButton
+            android:id="@+id/afficherFavorisButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/show_fav" />
+
+        <!-- Bouton "Afficher le budget" -->
+        <ImageButton
+            android:id="@+id/afficherBudgetButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/show_budget" />
+
+        <!-- Bouton "Supprimer tout" -->
+        <ImageButton
+            android:id="@+id/supprimerTout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/delete_all_branch" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

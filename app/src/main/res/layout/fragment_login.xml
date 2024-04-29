@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/connexionToolbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#DCFFC107"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:text="@string/connexiontitle"
+            android:textColor="#696969"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Image de Connexion -->
+    <ImageView
+        android:id="@+id/imageConnexion"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@id/connexionToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/imagedeconnexion"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/connexion"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- Texte "Identifiez-vous" -->
+    <TextView
+        android:id="@+id/textIdentifiezVous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageConnexion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/identifiez_vous"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:padding="8dp"
+        android:textColor="#FF5722"
+        android:textStyle="bold"/>
+
+    <!-- Champ d'Identifiant -->
+    <EditText
+        android:id="@+id/editTextIdentifiant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textIdentifiezVous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/identifiant"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:autofillHints="Identifiant" />
+
+    <!-- Champ Mot De Passe -->
+    <EditText
+        android:id="@+id/editTextMotDePasse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextIdentifiant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/mot_de_passe"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:autofillHints="Mot de passe" />
+
+    <!-- Bouton Connexion -->
+    <Button
+        android:id="@+id/buttonConnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editTextMotDePasse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#CEFF9800"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:text="@string/connexionBoutton"
+        android:textColor="#696969"
+        android:textSize="20sp" />
+
+    <!-- CheckBox "Se souvenir de moi" -->
+    <CheckBox
+        android:id="@+id/checkboxSauvegarder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonConnexion"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/se_souvenir_de_moi"
+        android:textSize="20sp" />
+
+    <!-- Lien pour la page d'inscription -->
+    <TextView
+        android:id="@+id/textPasDeCompte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/checkboxSauvegarder"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/pas_compte"
+        android:textSize="20sp"
+        android:textColor="#696969"/>
+
+    <TextView
+        android:id="@+id/textLienConnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textPasDeCompte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/inscrivez_vous"
+        android:textSize="20sp"
+        android:textColor="#CEFF9800"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

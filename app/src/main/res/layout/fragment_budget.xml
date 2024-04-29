@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/modificationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#DCFFC107"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/budget_de_succursale"
+            android:textColor="#696969"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageBudget"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/modificationToolbar"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/budget"
+        android:contentDescription="@string/bannerbudget" />
+
+    <EditText
+        android:id="@+id/nomSuccursaleBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageBudget"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/nom_succursale"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+
+    <!-- TextView pour afficher le budget -->
+    <TextView
+        android:id="@+id/budgetSuccursaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomSuccursaleBudget"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#000" />
+
+    <!-- Bouton "Afficher Budget" -->
+    <Button
+        android:id="@+id/afficherBudgetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budgetSuccursaleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#CEFF9800"
+        android:padding="15dp"
+        android:text="@string/afficher_budget"
+        android:textColor="#696969"
+        android:textSize="18sp" />
+
+</RelativeLayout>
